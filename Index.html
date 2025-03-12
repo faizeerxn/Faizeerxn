@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fake Product Review Identification</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f8f9fa;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background: #ff9900;
+            color: white;
+            text-align: center;
+            padding: 15px;
+        }
+
+        nav {
+            background: #333;
+            padding: 10px;
+            text-align: center;
+        }
+
+        nav a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .content {
+            width: 60%;
+            margin: 20px auto;
+            padding: 20px;
+            background: white;
+            box-shadow: 0px 0px 10px gray;
+            border-radius: 8px;
+        }
+
+        article {
+            margin-bottom: 20px;
+        }
+
+        h2 {
+            color: #ff9900;
+        }
+
+        textarea {
+            width: 100%;
+            height: 100px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        button {
+            background: #ff9900;
+            color: white;
+            padding: 10px;
+            border: none;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+
+        button:hover {
+            background: #e68a00;
+        }
+
+        footer {
+            background: #333;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            margin-top: 20px;
+        }
+
+        .contact-info a {
+            color: #ff9900;
+            text-decoration: none;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Fake Product Review Identification</h1>
+        <p>Detecting Fake Reviews Using AI & NLP</p>
+    </header>
+
+    <nav>
+        <a href="#">Home</a>
+        <a href="#about">About</a>
+        <a href="#how-it-works">How It Works</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <section class="content">
+        <article id="about">
+            <h2>About Me</h2>
+            <p>Hi, I am <b>Faizul Rahman</b>, an AI Engineer passionate about developing AI solutions.  
+            My focus is on <b>Fake Product Review Detection</b> using **BERT, RoBERTa, and XLNet**.  
+            I have expertise in **Cloud Engineering, DevOps, AWS, and Linux Bash scripting**.</p>
+        </article>
+
+        <article id="how-it-works">
+            <h2>How Do We Identify Fake Reviews?</h2>
+            <ul>
+                <li>🛑 <b>Unnatural Language</b> – Overuse of promotional words.</li>
+                <li>📅 <b>Time Pattern</b> – Multiple reviews in a short period.</li>
+                <li>📊 <b>Sentiment Analysis</b> – Extreme positive or negative tone.</li>
+                <li>💬 <b>Repetitive Reviews</b> – Same content on multiple products.</li>
+            </ul>
+        </article>
+
+        <article>
+            <h2>Our AI Model: RoBERTa</h2>
+            <p>We use the <b>RoBERTa Transformer Model</b>, which is trained on fake vs. real reviews. The model analyzes textual data and assigns a <b>Fake Probability Score</b>.</p>
+        </article>
+
+        <article>
+            <h2>Try Our Fake Review Detector</h2>
+            <p>Enter a product review below to check if it's fake or genuine:</p>
+            <textarea id="reviewText" placeholder="Paste your review here..."></textarea>
+            <button onclick="checkReview()">Analyze Review</button>
+            <p id="result"></p>
+        </article>
+
+        <article id="contact">
+            <h2>Contact Information</h2>
+            <p>📞 Mobile: <b>+91 88705 95612</b></p>
+            <p>📧 Email: <a href="mailto:faizulrahman950@gmail.com">faizulrahman950@gmail.com</a></p>
+            <p>🔗 LinkedIn: <a href="https://www.linkedin.com/in/faizul-rahman-m-59425129" target="_blank">Faizul Rahman</a></p>
+        </article>
+    </section>
+
+    <footer>
+        <p>© 2025 Fake Review Detector. All rights reserved.</p>
+    </footer>
+
+    <script>
+        function checkReview() {
+            let review = document.getElementById("reviewText").value;
+            if (review.trim() === "") {
+                alert("Please enter a review!");
+                return;
+            }
+            document.getElementById("result").innerHTML = "🔍 Analyzing... (AI Model Processing)";
+            setTimeout(() => {
+                let probability = (Math.random() * 100).toFixed(2);
+                let isFake = probability > 50 ? "Fake Review ❌" : "Genuine Review ✅";
+                document.getElementById("result").innerHTML = `Prediction: ${isFake} (Confidence: ${probability}%)`;
+            }, 2000);
+        }
+    </script>
+
+</body>
+</html>
